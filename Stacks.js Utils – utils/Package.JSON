@@ -1,0 +1,37 @@
+{
+  "name": "fx1-stacks-hubs",
+  "version": "1.0.0",
+  "description": "FX1 Digital Hubs on Stacks blockchain: NFTs, on-chain hubs, creator tools.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "FX1",
+    "Stacks",
+    "Web3",
+    "NFT",
+    "Hubs",
+    "Digital Hubs",
+    "Clarity"
+  ],
+  "author": "FX1 Digital Hubs",
+  "license": "MIT",
+  "dependencies": {
+    "next": "14.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "^5.1.0",
+    "@stacks/connect": "^1.0.0",
+    "@stacks/network": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "@types/node": "^20.5.1",
+    "eslint": "^8.48.0",
+    "eslint-config-next": "14.0.0"
+  }
+}
