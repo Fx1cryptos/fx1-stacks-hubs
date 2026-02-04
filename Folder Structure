@@ -1,0 +1,23 @@
+fx1-stacks-hubs/
+│
+├── README.md
+├── package.json
+├── .gitignore
+├── tsconfig.json
+├── next.config.js
+│
+├── contracts/
+│   └── fx1-hub.clar        # starter Clarity smart contract
+│
+├── pages/
+│   ├── index.tsx           # main homepage
+│   └── _app.tsx            # Next.js app wrapper
+│
+├── components/
+│   └── Header.tsx          # example header
+│
+├── utils/
+│   └── stacksClient.ts     # Stacks.js setup
+│
+└── public/
+    └── logo.png            # FX1 logo placeholder
