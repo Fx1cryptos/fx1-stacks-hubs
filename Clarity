@@ -1,0 +1,23 @@
+;; fx1-fashion-nft.clar
+;; Simple NFT for digital fashion wearables on Stacks
+
+(impl-trait 'SP2PABAF9FTAJYNFZH93XENM8G7Y7MJ3J3RMCW9Z2.sip-009-nft-trait.sip-009-nft-trait)
+
+(define-non-fungible-token fx1-fashion uint)
+
+(define-data-var last-token-id uint u0)
+
+(define-read-only (get-last-token-id)
+  (ok (var-get last-token-id)))
+
+(define-read-only (get-token-uri (token-id uint))
+  (ok (some "ipfs://your-cid-here/metadata.json")))  ;; Replace with your IPFS CID
+
+(define-public (mint (token-id uint))
+  (begin
+    (asserts! (is-eq tx-sender (contract-creator)) (err u403))  ;; Only creator can mint for now
+    (try! (nft-mint? fx1-fashion token-id tx-sender))
+    (var-set last-token-id token-id)
+    (ok token-id)))
+
+;; Add transfer, burn, etc. functions later
